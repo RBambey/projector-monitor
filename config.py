@@ -1,12 +1,29 @@
 from __future__ import annotations
 
 import json
+import sys
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import List
 
 _DEFAULT_IP = "192.168.48.110"
-_CONFIG_PATH = Path(__file__).parent / "config.json"
+
+
+def _app_data_dir() -> Path:
+    """Return the writable data directory for config and logs.
+
+    Inside a PyInstaller .app bundle sys.frozen is True and __file__ resolves
+    into the read-only bundle, so we redirect to Application Support instead.
+    """
+    if getattr(sys, 'frozen', False):
+        d = Path.home() / "Library" / "Application Support" / "Projector Monitor"
+    else:
+        d = Path(__file__).parent
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+_CONFIG_PATH = _app_data_dir() / "config.json"
 
 
 @dataclass

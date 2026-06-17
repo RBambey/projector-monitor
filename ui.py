@@ -496,7 +496,8 @@ class MonitorApp(tk.Tk):
         self._add_panel(proj)
 
     def _on_open_log_dir(self) -> None:
-        log_path = Path(__file__).parent / self._cfg.log_dir
+        from config import _app_data_dir
+        log_path = _app_data_dir() / self._cfg.log_dir
         log_path.mkdir(parents=True, exist_ok=True)
         if sys.platform == "darwin":
             subprocess.Popen(["open", str(log_path)])
@@ -509,7 +510,8 @@ class MonitorApp(tk.Tk):
         if not messagebox.askyesno("Clear Log", "Delete all temp log files?",
                                    parent=self):
             return
-        log_dir = Path(__file__).parent / self._cfg.log_dir
+        from config import _app_data_dir
+        log_dir = _app_data_dir() / self._cfg.log_dir
         for f in log_dir.glob("temps_????????.csv"):
             f.unlink(missing_ok=True)
         old = log_dir / "temps.csv"   # pre-rotation legacy file

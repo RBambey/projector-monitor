@@ -41,7 +41,8 @@ class DataLogger:
         self._alert_cooldown_secs = 300  # 5 minutes between alert dumps per projector
 
     def start(self) -> None:
-        base = Path(__file__).parent / self._cfg.log_dir
+        from config import _app_data_dir
+        base = _app_data_dir() / self._cfg.log_dir
         base.mkdir(parents=True, exist_ok=True)
         self._log_dir = base
         self._alert_dir = base / "alerts"
