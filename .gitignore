@@ -4,6 +4,5 @@ logs/
 config.json
 .venv/
 .DS_Store
-dist/
 build/
 *.spec
