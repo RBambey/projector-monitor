@@ -6,6 +6,7 @@ import queue
 import re
 import threading
 import time
+from datetime import date, timedelta
 from pathlib import Path
 from typing import TYPE_CHECKING, Dict, Optional
 
@@ -14,6 +15,7 @@ if TYPE_CHECKING:
     from poller import TempReading, TemperaturePoller
 
 _CSV_HEADER = "timestamp,projector_label,projector_ip,sensor_index,temp_celsius,error\n"
+_LOG_RETENTION_DAYS = 7
 
 
 class DataLogger:
@@ -28,7 +30,9 @@ class DataLogger:
         self._cfg = cfg
         self._poller = poller
         self._queue = event_queue
+        self._log_dir: Optional[Path] = None
         self._log_file = None
+        self._log_date: Optional[date] = None
         self._alert_dir: Optional[Path] = None
         self._thread: Optional[threading.Thread] = None
         self._stop = threading.Event()
@@ -39,13 +43,12 @@ class DataLogger:
     def start(self) -> None:
         base = Path(__file__).parent / self._cfg.log_dir
         base.mkdir(parents=True, exist_ok=True)
+        self._log_dir = base
         self._alert_dir = base / "alerts"
         self._alert_dir.mkdir(parents=True, exist_ok=True)
 
-        log_path = base / "temps.csv"
-        self._log_file = open(log_path, "a", newline="", buffering=1)
-        if log_path.stat().st_size == 0:
-            self._log_file.write(_CSV_HEADER)
+        self._prune_old_logs()
+        self._open_today()
 
         self._thread = threading.Thread(
             target=self._run, daemon=True, name="logger"
@@ -60,11 +63,35 @@ class DataLogger:
 
     # ------------------------------------------------------------------
 
+    def _open_today(self) -> None:
+        today = date.today()
+        if self._log_file:
+            self._log_file.close()
+        log_path = self._log_dir / f"temps_{today.strftime('%Y%m%d')}.csv"
+        self._log_file = open(log_path, "a", newline="", buffering=1)
+        if log_path.stat().st_size == 0:
+            self._log_file.write(_CSV_HEADER)
+        self._log_date = today
+
+    def _prune_old_logs(self) -> None:
+        cutoff = date.today() - timedelta(days=_LOG_RETENTION_DAYS)
+        for f in self._log_dir.glob("temps_????????.csv"):
+            try:
+                file_date = date.fromisoformat(f.stem[6:])  # temps_YYYYMMDD
+                if file_date < cutoff:
+                    f.unlink()
+            except ValueError:
+                pass
+
     def _run(self) -> None:
         while not self._stop.is_set():
             try:
                 reading: TempReading = self._queue.get(timeout=1.0)
             except queue.Empty:
+                # Rotate at midnight and prune once per day
+                if self._log_date and date.today() != self._log_date:
+                    self._open_today()
+                    self._prune_old_logs()
                 continue
             self._write_csv(reading)
             self._check_alert(reading)

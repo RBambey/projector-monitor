@@ -13,6 +13,10 @@ _CONFIG_PATH = Path(__file__).parent / "config.json"
 class ProjectorConfig:
     label: str
     ip: str
+    # Web interface credentials (Digest auth) — used for HTTP temperature polling
+    web_username: str = ""
+    web_password: str = ""
+    # PJLink fallback (port 4352) — only used if web credentials are absent
     port: int = 4352
     auth_password: str = ""
     enabled: bool = True
@@ -30,7 +34,12 @@ class AppConfig:
 def _default_config() -> AppConfig:
     return AppConfig(
         projectors=[
-            ProjectorConfig(label="Projector 1", ip=_DEFAULT_IP)
+            ProjectorConfig(
+                label="Projector 1",
+                ip=_DEFAULT_IP,
+                web_username="sfjazz",
+                web_password="sfjazz12345",
+            )
         ]
     )
 
@@ -42,7 +51,18 @@ def load_config(path: str | Path = _CONFIG_PATH) -> AppConfig:
         save_config(cfg, p)
         return cfg
     data = json.loads(p.read_text())
-    projectors = [ProjectorConfig(**d) for d in data.get("projectors", [])]
+    projectors = [
+        ProjectorConfig(
+            label=d.get("label", d.get("ip", "?")),
+            ip=d.get("ip", ""),
+            web_username=d.get("web_username", ""),
+            web_password=d.get("web_password", ""),
+            port=d.get("port", 4352),
+            auth_password=d.get("auth_password", ""),
+            enabled=d.get("enabled", True),
+        )
+        for d in data.get("projectors", [])
+    ]
     if not projectors:
         projectors = _default_config().projectors
     return AppConfig(

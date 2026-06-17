@@ -95,6 +95,11 @@ class ProjectorClient:
     def _parse_tmpr(response: bytes) -> List[float]:
         """Parse "%2TMPR=45+47\r" → [45.0, 47.0]."""
         text = response.decode("ascii", errors="replace").strip()
+
+        # PJLink authentication failure — wrong password
+        if "PJLINK ERRA" in text:
+            raise PJLinkError("AUTH_FAILED — check PJLink password in setup")
+
         # Strip any leading auth token (32 hex chars before the %)
         if "%" in text:
             text = text[text.index("%"):]
