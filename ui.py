@@ -431,6 +431,7 @@ class MonitorApp(tk.Tk):
         btn_frame.pack(fill="x", padx=8, pady=8)
         for label, cmd in [
             ("GRAPH",         self._on_graph),
+            ("EXPORT EXCEL",  self._on_export),
             ("ADD PROJECTOR", self._on_add_projector),
             ("OPEN LOG DIR",  self._on_open_log_dir),
             ("CLEAR LOG",     self._on_clear_log),
@@ -482,6 +483,22 @@ class MonitorApp(tk.Tk):
             except tk.TclError:
                 pass
         self._graph_win = _GraphWindow(self, self._cfg, self._poller)
+
+    def _on_export(self) -> None:
+        from config import _app_data_dir
+        from export_report import generate_report
+        try:
+            path = generate_report(
+                _app_data_dir() / self._cfg.log_dir,
+                self._cfg.temp_threshold,
+            )
+            subprocess.Popen(["open", "-R", str(path)])
+            messagebox.showinfo("Export Complete", f"Saved:\n{path}", parent=self)
+        except FileNotFoundError:
+            messagebox.showerror("No Log", "No log file found for today yet.",
+                                 parent=self)
+        except Exception as e:
+            messagebox.showerror("Export Failed", str(e), parent=self)
 
     def _on_add_projector(self) -> None:
         dlg = _AddProjectorDialog(self)
