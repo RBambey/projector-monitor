@@ -63,7 +63,9 @@ class TemperaturePoller:
     # ------------------------------------------------------------------
 
     def _start_one(self, proj: ProjectorConfig) -> None:
-        capacity = int(self._cfg.rolling_buffer_minutes * 60 / self._cfg.poll_interval)
+        # Multiply by 8: each poll appends one entry per sensor (up to ~8).
+        # Without this a 4-sensor projector fills the buffer 4× too fast.
+        capacity = int(self._cfg.rolling_buffer_minutes * 60 / self._cfg.poll_interval) * 8
         self._buffers[proj.ip] = deque(maxlen=capacity)
         t = threading.Thread(
             target=self._poll_loop, args=(proj,),

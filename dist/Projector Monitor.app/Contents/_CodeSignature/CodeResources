@@ -1298,7 +1298,7 @@
 		</data>
 		<key>Resources/base_library.zip</key>
 		<data>
-		22v4SqY6Y9Vyelqx3jzgfrFwzQk=
+		62bzzR5unfhaF/x2ws72Q4S0qqs=
 		</data>
 		<key>Resources/certifi-2026.6.17.dist-info/INSTALLER</key>
 		<data>
@@ -1697,6 +1697,15 @@
 			</data>
 			<key>requirement</key>
 			<string>cdhash H"a865103b1b8232daa68144c220d2236ba4b33e84"</string>
+		</dict>
+		<key>Frameworks/python3__dot__13/lib-dynload/_elementtree.cpython-313-darwin.so</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			LnFRtDejhuJWgedNoPGNauaIRPw=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"2e7151b437a386e25681e74da0f18d6ae68844fc"</string>
 		</dict>
 		<key>Frameworks/python3__dot__13/lib-dynload/_hashlib.cpython-313-darwin.so</key>
 		<dict>
@@ -4308,7 +4317,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L0ahJGscPJJYnNB7lD38jxphqFI+mwDEOtcvz2Lu5oE=
+			dOowAzsvcuYMbhaheYv/eiK2GzGV4upR/91tZFZmwUA=
 			</data>
 		</dict>
 		<key>Resources/certifi-2026.6.17.dist-info/INSTALLER</key>
