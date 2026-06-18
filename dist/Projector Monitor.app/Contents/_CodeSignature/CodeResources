@@ -1298,7 +1298,7 @@
 		</data>
 		<key>Resources/base_library.zip</key>
 		<data>
-		62bzzR5unfhaF/x2ws72Q4S0qqs=
+		NvZ4vbsDxJxMPr0nsFDHfDoyYfc=
 		</data>
 		<key>Resources/certifi-2026.6.17.dist-info/INSTALLER</key>
 		<data>
@@ -1344,9 +1344,9 @@
 		<data>
 		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
 		</data>
-		<key>Resources/icon-windowed.icns</key>
+		<key>Resources/icon.icns</key>
 		<data>
-		eEHOuYpZLB0vKGVIWGZOh5rH8+o=
+		tH1rO2X8lyPLQX83jX6KxLldZ80=
 		</data>
 		<key>Resources/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/INSTALLER</key>
 		<data>
@@ -1420,6 +1420,182 @@
 			<key>requirement</key>
 			<string>cdhash H"116833cf1c49e9ac1d7fd19df8916bffee8c9b01"</string>
 		</dict>
+		<key>Frameworks/PIL/.dylibs</key>
+		<dict>
+			<key>symlink</key>
+			<string>__dot__dylibs</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libXau.6.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			dFQtVC5MjLBzo/FEi6H1GoW++LI=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"74542d542e4c8cb073a3f1448ba1f51a85bef8b2"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libavif.16.4.1.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			9krpqDxPpCPA6Wpk4GM7BIgX6eQ=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"f64ae9a83c4fa423c0e96a64e0633b048817e9e4"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libjpeg.62.4.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Fv+nlLY+mEoKEogoOUA3VNZTRRg=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"16ffa794b63e984a0a12882839403754d6534518"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/liblcms2.2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Bsa5M139LxQWIVMdjXMO4NA/k6Y=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"06c6b9335dfd2f141621531d8d730ee0d03f93a6"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/liblzma.5.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			wx8UaDBrdfDoX9lsVzuBXYD7Xks=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"c31f1468306b75f0e85fd96c573b815d80fb5e4b"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libopenjp2.2.5.4.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			MYQWdgp/xuPAir2asDZJOoELKLo=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"318416760a7fc6e3c08abd9ab036493a810b28ba"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libsharpyuv.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			+y7HyN1KGRXuYMi1GrLj3maZT4g=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"fb2ec7c8dd4a1915ee60c8b51ab2e3de66994f88"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libtiff.6.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			L892kccgzHqV4vYQijAlUc1hXWk=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"2fcf7691c720cc7a95e2f6108a302551cd615d69"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libwebp.7.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			aDDgURSVdDeI1+i+swYbPgtPHNo=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"6830e0511495743788d7e8beb3061b3e0b4f1cda"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libwebpdemux.2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			pbBjgc4CZDuo41KYYIZ72VKjwFM=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"a5b06381ce02643ba8e3529860867bd952a3c053"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libwebpmux.3.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			MKIVu+/NfNNvwHE13gpEXq/6u0E=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"30a215bbefcd7cd36fc07135de0a445eaffabb41"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libxcb.1.1.0.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ONWJX5SRK/lrp/DPXG6RzUuDvOA=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"38d5895f94912bf96ba7f0cf5c6e91cd4b83bce0"</string>
+		</dict>
+		<key>Frameworks/PIL/__dot__dylibs/libz.1.3.1.zlib-ng.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			tPjJ3qpmxTGHo3tAG+0+hkENUf8=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"b4f8c9deaa66c53187a37b401bed3e86410d51ff"</string>
+		</dict>
+		<key>Frameworks/PIL/_avif.cpython-313-darwin.so</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			SuQ8f8qjMHxwlQjE6vioU67pMt4=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"4ae43c7fcaa3307c709508c4eaf8a853aee932de"</string>
+		</dict>
+		<key>Frameworks/PIL/_imaging.cpython-313-darwin.so</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			BkgiXT1B1dHTADxbujvwUv4VnhQ=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"0648225d3d41d5d1d3003c5bba3bf052fe159e14"</string>
+		</dict>
+		<key>Frameworks/PIL/_imagingcms.cpython-313-darwin.so</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			m4SkERWmS/wmsxyzO6KGUeoQ8Ps=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"9b84a41115a64bfc26b31cb33ba28651ea10f0fb"</string>
+		</dict>
+		<key>Frameworks/PIL/_imagingmath.cpython-313-darwin.so</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			OpPKecAHOy1/1APZfkNmSNPZ/Vo=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"3a93ca79c0073b2d7fd403d97e436648d3d9fd5a"</string>
+		</dict>
+		<key>Frameworks/PIL/_imagingtk.cpython-313-darwin.so</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			J90+I2qysw7ZrxwXh+mWKVUPRH0=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"27dd3e236ab2b30ed9af1c1787e99629550f447d"</string>
+		</dict>
+		<key>Frameworks/PIL/_webp.cpython-313-darwin.so</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			fdt9oPGpkmnWbAIllAKVbNw/YfI=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"7ddb7da0f1a99269d66c02259402956cdc3f61f2"</string>
+		</dict>
 		<key>Frameworks/Python</key>
 		<dict>
 			<key>symlink</key>
@@ -1486,6 +1662,16 @@
 			<key>requirement</key>
 			<string>cdhash H"ccdd320251014c92b6dcc68ac2cc08e437d520be"</string>
 		</dict>
+		<key>Frameworks/libXau.6.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libXau.6.dylib</string>
+		</dict>
+		<key>Frameworks/libavif.16.4.1.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libavif.16.4.1.dylib</string>
+		</dict>
 		<key>Frameworks/libcrypto.3.dylib</key>
 		<dict>
 			<key>cdhash</key>
@@ -1495,14 +1681,20 @@
 			<key>requirement</key>
 			<string>cdhash H"f466904065afb9d39d13828d28edf2ba84e2de9f"</string>
 		</dict>
+		<key>Frameworks/libjpeg.62.4.0.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libjpeg.62.4.0.dylib</string>
+		</dict>
+		<key>Frameworks/liblcms2.2.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/liblcms2.2.dylib</string>
+		</dict>
 		<key>Frameworks/liblzma.5.dylib</key>
 		<dict>
-			<key>cdhash</key>
-			<data>
-			BsSnL75CwDtKP0VbwOSIIe7t6to=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"06c4a72fbe42c03b4a3f455bc0e48821eeedeada"</string>
+			<key>symlink</key>
+			<string>PIL/.dylibs/liblzma.5.dylib</string>
 		</dict>
 		<key>Frameworks/libmpdec.4.dylib</key>
 		<dict>
@@ -1512,6 +1704,16 @@
 			</data>
 			<key>requirement</key>
 			<string>cdhash H"324d2f0f01e29cf341847038b46111121316787b"</string>
+		</dict>
+		<key>Frameworks/libopenjp2.2.5.4.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libopenjp2.2.5.4.dylib</string>
+		</dict>
+		<key>Frameworks/libsharpyuv.0.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libsharpyuv.0.dylib</string>
 		</dict>
 		<key>Frameworks/libssl.3.dylib</key>
 		<dict>
@@ -1540,6 +1742,11 @@
 			<key>requirement</key>
 			<string>cdhash H"fcd3edb7c3a6306edd79d4b27c3eed7c2a7f595f"</string>
 		</dict>
+		<key>Frameworks/libtiff.6.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libtiff.6.dylib</string>
+		</dict>
 		<key>Frameworks/libtommath.1.dylib</key>
 		<dict>
 			<key>cdhash</key>
@@ -1548,6 +1755,31 @@
 			</data>
 			<key>requirement</key>
 			<string>cdhash H"dc3d2200aab608dbf87df2af14b45d1f0399131d"</string>
+		</dict>
+		<key>Frameworks/libwebp.7.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libwebp.7.dylib</string>
+		</dict>
+		<key>Frameworks/libwebpdemux.2.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libwebpdemux.2.dylib</string>
+		</dict>
+		<key>Frameworks/libwebpmux.3.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libwebpmux.3.dylib</string>
+		</dict>
+		<key>Frameworks/libxcb.1.1.0.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libxcb.1.1.0.dylib</string>
+		</dict>
+		<key>Frameworks/libz.1.3.1.zlib-ng.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libz.1.3.1.zlib-ng.dylib</string>
 		</dict>
 		<key>Frameworks/python3.13</key>
 		<dict>
@@ -2036,6 +2268,11 @@
 		<dict>
 			<key>symlink</key>
 			<string>../Frameworks/81d243bd2c585b0f4821__mypyc.cpython-313-darwin.so</string>
+		</dict>
+		<key>Resources/PIL</key>
+		<dict>
+			<key>symlink</key>
+			<string>../Frameworks/PIL</string>
 		</dict>
 		<key>Resources/Python</key>
 		<dict>
@@ -4317,7 +4554,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dOowAzsvcuYMbhaheYv/eiK2GzGV4upR/91tZFZmwUA=
+			YWts1ZyvM5fooOIEEmsmVmmecHw9FA9lMsB6JyDF3Hg=
 			</data>
 		</dict>
 		<key>Resources/certifi-2026.6.17.dist-info/INSTALLER</key>
@@ -4402,27 +4639,57 @@
 			<key>symlink</key>
 			<string>../Frameworks/charset_normalizer</string>
 		</dict>
-		<key>Resources/icon-windowed.icns</key>
+		<key>Resources/icon.icns</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uQo7VuWRab4Phv4EEGmfQsyqFqDIXZgO8OtgaAMvCzY=
+			aM6NQccJXS7zokyDRFRHXtISnQ/J6K1DhNoAun7vhGU=
 			</data>
+		</dict>
+		<key>Resources/libXau.6.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libXau.6.dylib</string>
+		</dict>
+		<key>Resources/libavif.16.4.1.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libavif.16.4.1.dylib</string>
 		</dict>
 		<key>Resources/libcrypto.3.dylib</key>
 		<dict>
 			<key>symlink</key>
 			<string>../Frameworks/libcrypto.3.dylib</string>
 		</dict>
+		<key>Resources/libjpeg.62.4.0.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libjpeg.62.4.0.dylib</string>
+		</dict>
+		<key>Resources/liblcms2.2.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/liblcms2.2.dylib</string>
+		</dict>
 		<key>Resources/liblzma.5.dylib</key>
 		<dict>
 			<key>symlink</key>
-			<string>../Frameworks/liblzma.5.dylib</string>
+			<string>PIL/.dylibs/liblzma.5.dylib</string>
 		</dict>
 		<key>Resources/libmpdec.4.dylib</key>
 		<dict>
 			<key>symlink</key>
 			<string>../Frameworks/libmpdec.4.dylib</string>
+		</dict>
+		<key>Resources/libopenjp2.2.5.4.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libopenjp2.2.5.4.dylib</string>
+		</dict>
+		<key>Resources/libsharpyuv.0.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libsharpyuv.0.dylib</string>
 		</dict>
 		<key>Resources/libssl.3.dylib</key>
 		<dict>
@@ -4439,10 +4706,40 @@
 			<key>symlink</key>
 			<string>../Frameworks/libtcl9tk9.0.dylib</string>
 		</dict>
+		<key>Resources/libtiff.6.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libtiff.6.dylib</string>
+		</dict>
 		<key>Resources/libtommath.1.dylib</key>
 		<dict>
 			<key>symlink</key>
 			<string>../Frameworks/libtommath.1.dylib</string>
+		</dict>
+		<key>Resources/libwebp.7.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libwebp.7.dylib</string>
+		</dict>
+		<key>Resources/libwebpdemux.2.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libwebpdemux.2.dylib</string>
+		</dict>
+		<key>Resources/libwebpmux.3.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libwebpmux.3.dylib</string>
+		</dict>
+		<key>Resources/libxcb.1.1.0.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libxcb.1.1.0.dylib</string>
+		</dict>
+		<key>Resources/libz.1.3.1.zlib-ng.dylib</key>
+		<dict>
+			<key>symlink</key>
+			<string>PIL/.dylibs/libz.1.3.1.zlib-ng.dylib</string>
 		</dict>
 		<key>Resources/python3.13</key>
 		<dict>

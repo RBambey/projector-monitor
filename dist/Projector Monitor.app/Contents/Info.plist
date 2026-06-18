@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>Projector Monitor</string>
 	<key>CFBundleIconFile</key>
-	<string>icon-windowed.icns</string>
+	<string>icon.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>Projector Monitor</string>
 	<key>CFBundleInfoDictionaryVersion</key>
